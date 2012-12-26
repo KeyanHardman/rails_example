@@ -11,10 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121226211342) do
+ActiveRecord::Schema.define(:version => 20121226215003) do
 
   create_table "notes", :force => true do |t|
     t.text     "text"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "patient_id"
+  end
+
+  add_index "notes", ["patient_id"], :name => "index_notes_on_patient_id"
+
+  create_table "patients", :force => true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.integer  "age"
+    t.date     "birth_date"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

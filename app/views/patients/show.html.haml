@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b First name:
+  = @patient.first_name
+%p
+  %b Last name:
+  = @patient.last_name
+%p
+  %b Age:
+  = @patient.age
+%p
+  %b Birth date:
+  = @patient.birth_date
+= render 'notes/form'
+.notes
+  - @patient.notes.each do |note|
+    .note
+      .created= note.created_at
+      .text= note.text
+
+= link_to 'Edit', edit_patient_path(@patient)
+\|
+= link_to 'Back', patients_path
