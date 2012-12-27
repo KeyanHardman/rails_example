@@ -1,0 +1,4 @@
+.note{:data => {:id => note.id}}
+  .edit= link_to 'edit', edit_note_path(note.id), :remote => true
+  .created= note.created_at
+  .text= note.text
