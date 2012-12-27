@@ -1,6 +1,6 @@
 class NotesController < ApplicationController
 
-  respond_to :js, :only => [:edit, :update]
+  respond_to :js, :only => [:edit, :update, :create]
 
   # GET /notes
   # GET /notes.json
@@ -44,16 +44,7 @@ class NotesController < ApplicationController
   # POST /notes.json
   def create
     @note = Note.new(params[:note])
-
-    respond_to do |format|
-      if @note.save
-        format.html { redirect_to patient_path(@note.patient_id), notice: 'Note was successfully created.' }
-        format.json { render json: @note, status: :created, location: @note }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @note.errors, status: :unprocessable_entity }
-      end
-    end
+    @note.save
   end
 
   # PUT /notes/1
