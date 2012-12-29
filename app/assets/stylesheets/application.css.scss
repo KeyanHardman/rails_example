@@ -2,10 +2,11 @@
 @import "compass/layout/sticky-footer";
 @import "compass/css3";
 @import "compass/utilities";
+@import "compass/css3/transition";
 
-@import "compass_twitter_bootstrap";
+@import "global";
 @import "colors";
+@import "compass_twitter_bootstrap";
 @import "layout";
 @import "home";
-// @import "colors";
-// @import "layout";
+

@@ -1,6 +1,7 @@
 RailsExample::Application.routes.draw do
   devise_for :users
-
+  get "/features" => "home#features"
+  get "/about" => "home#about"
   resources :notes, :patients
   root :to => 'home#home'
   # The priority is based upon order of creation:
