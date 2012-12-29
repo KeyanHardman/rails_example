@@ -1,4 +1,5 @@
 class PatientsController < ApplicationController
+  before_filter :authenticate_user!
   # GET /patients
   # GET /patients.json
   def index
@@ -14,7 +15,7 @@ class PatientsController < ApplicationController
   # GET /patients/1.json
   def show
     @patient = Patient.find(params[:id])
-    @note = Note.new(:patient_id => @patient.id)
+    @note = Note.new(:patient_id => @patient)
 
     respond_to do |format|
       format.html # show.html.erb

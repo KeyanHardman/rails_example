@@ -1,6 +1,8 @@
-RailsExample::Application.routes.draw do  
+RailsExample::Application.routes.draw do
+  devise_for :users
+
   resources :notes, :patients
-  root :to => 'notes#index'
+  root :to => 'home#home'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

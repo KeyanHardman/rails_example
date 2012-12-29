@@ -1,0 +1,18 @@
+@mixin content {
+  width: 950px;
+  margin: 0 auto;
+}
+
+#header{
+  font-family: Ubuntu, sans-serif;
+}
+
+#content {
+  @include content;
+  font-family: "Open Sans", sans-serif;
+}
+
+#footer {
+  font-family: Ubuntu, sans-serif;
+}
+

@@ -1,0 +1,14 @@
+#content.home{
+
+  width: 100%;
+
+  .centered-content{
+    @include content;
+  }
+}
+
+#welcome{
+  background-color: $light_grey;
+  height: 300px;
+  @include box-shadow(0 -4px 9px -6px $shadow_grey inset)
+}

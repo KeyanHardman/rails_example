@@ -1,17 +1,19 @@
-%p#notice= notice
 
-%p
-  %b First name:
-  = @patient.first_name
-%p
-  %b Last name:
-  = @patient.last_name
-%p
-  %b Age:
-  = @patient.age
-%p
-  %b Birth date:
-  = @patient.birth_date
+.well
+  %div
+    %p.data
+      %b First name:
+      = @patient.first_name
+    %p.data
+      %b Last name:
+      = @patient.last_name
+  %div
+    %p.data
+      %b Age:
+      = @patient.age
+    %p.data
+      %b Birth date:
+      = @patient.birth_date
 
 = render 'notes/form'
 
@@ -19,6 +21,4 @@
   - @patient.notes.each do |note|
     = render note
 
-= link_to 'Edit', edit_patient_path(@patient)
-\|
-= link_to 'Back', patients_path
+= link_to 'Edit Patient', edit_patient_path(@patient)

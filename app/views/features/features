@@ -1,0 +1,8 @@
+.row-fluid
+        .span3
+          .well.sidebar-nav
+            %ul.nav.nav-list
+              %li.nav-header Sidebar
+              %li= link_to "Features", "/features"
+              %li= link_to "About", "/about"
+              %ul.nav.pull-right

@@ -8,7 +8,15 @@ gem 'rails', '3.2.8'
 gem 'mysql2'
 gem 'haml-rails'
 gem 'simple_form'
+gem 'devise'
+gem 'compass_twitter_bootstrap'
 # gem 'debugger'
+
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem "twitter-bootstrap-rails"
+gem 'libv8', '~> 3.11.8'
+gem 'therubyracer', '0.11.0beta5'
+gem 'compass-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
